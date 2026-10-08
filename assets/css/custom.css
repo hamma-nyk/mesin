@@ -1,0 +1,60 @@
+/* Override Lebar Sidebar AdminLTE */
+@media (min-width: 768px) {
+  body:not(.sidebar-collapse) .main-sidebar,
+  body:not(.sidebar-collapse) .main-sidebar::before {
+    width: 260px !important;
+  }
+
+  body:not(.sidebar-collapse) .content-wrapper,
+  body:not(.sidebar-collapse) .main-footer,
+  body:not(.sidebar-collapse) .main-header {
+    margin-left: 260px !important;
+  }
+
+  /* FIX: Lebar sidebar saat mode collapse di-hover */
+  .sidebar-mini.sidebar-collapse .main-sidebar:hover,
+  .sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused {
+    width: 260px !important;
+  }
+  
+  .sidebar-mini.sidebar-collapse .main-sidebar:hover .brand-link {
+    width: 260px !important;
+  }
+}
+
+/* 1. Atur dasar SEMUA nav-link (Normal) agar konsisten */
+[class*="sidebar-dark-"] .nav-sidebar .nav-link {
+  width: calc(100% - 10px) !important;
+  margin-right: 5px !important;
+  margin-left: 5px !important;
+  border-radius: 4px !important;
+  transition: background-color 0.2s ease, border-left 0.2s ease;
+}
+
+/* 2. State ACTIVE (Menu yang sedang dibuka) */
+[class*="sidebar-dark-"] .nav-sidebar .nav-item > .nav-link.active {
+  background-color: rgba(0, 0, 0, 0.15) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+  border-left: 3px solid #00a65a !important;
+}
+
+.brand-link {
+  width: 100% !important;
+}
+
+/* 3. State HOVER (Saat mouse diarahkan) */
+[class*="sidebar-dark-"] .nav-sidebar .nav-item > .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  /* Tidak perlu tulis margin dan max-width lagi di sini */
+}
+
+/* Tambahan: Penyesuaian untuk sub-menu (Treeview) agar tidak dobel border-left jika tidak diinginkan */
+[class*="sidebar-dark-"]
+  .nav-sidebar
+  .nav-treeview
+  > .nav-item
+  > .nav-link.active {
+  border-left: none !important; /* Hilangkan garis hijau di sub-menu jika dirasa mengganggu */
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}

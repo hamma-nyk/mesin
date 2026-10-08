@@ -1,0 +1,2 @@
+[Mon Aug 31 15:25:19 2026] PHP Warning:  PHP Startup: Unable to load dynamic library 'php_pdo_sqlsrv.dll' (tried: ext\php_pdo_sqlsrv.dll (The specified module could not be found), ext\php_php_pdo_sqlsrv.dll.dll (The specified module could not be found)) in Unknown on line 0
+[Mon Aug 31 15:25:19 2026] PHP 8.2.30 Development Server (http://localhost:8002) started
